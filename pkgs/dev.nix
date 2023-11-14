@@ -8,6 +8,7 @@
     pkgs.amp
     pkgs.goofys
     pkgs.nixpkgs-fmt
+    pkgs.arion
   ];
 }
 

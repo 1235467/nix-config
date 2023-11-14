@@ -6,8 +6,13 @@ in
   home.file = {
     #alias
     #upgrade packages in home-manager
+    ".local/bin/hmus" = {
+      text = "nix flake update ${variables.path.home-manager} && home\-manager switch \-\-flake ${variables.path.home-manager}";
+      executable = true;
+      enable = true;
+    };
     ".local/bin/hms" = {
-      text = "cd ${variables.path.home-manager} && nix flake update && home\-manager switch && cd";
+      text = "home\-manager switch \-\-flake ${variables.path.home-manager}";
       executable = true;
       enable = true;
     };
