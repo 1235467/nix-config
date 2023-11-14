@@ -7,12 +7,12 @@ in
     #alias
     #upgrade packages in home-manager
     ".local/bin/hmus" = {
-      text = "nix flake update ${variables.path.home-manager} && home\-manager switch \-\-flake ${variables.path.home-manager}";
+      text = "nix flake update ${variables.path.home-manager} && home\-manager switch";
       executable = true;
       enable = true;
     };
     ".local/bin/hms" = {
-      text = "home\-manager switch \-\-flake ${variables.path.home-manager}";
+      text = "home\-manager switch";
       executable = true;
       enable = true;
     };
